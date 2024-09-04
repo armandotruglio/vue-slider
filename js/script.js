@@ -1,8 +1,8 @@
 const { createApp } = Vue;
 
-createApp ({
+createApp({
     data() {
-        return{
+        return {
             activeIndex: 0,
             images: [
                 {
@@ -31,21 +31,32 @@ createApp ({
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 },
             ],
+            interval: setInterval(() => {
+                this.goToNext();
+            }, 3000),
         }
     },
     methods: {
-        goToNext: function() {
-            if(this.activeIndex < this.images.length - 1)
+        goToNext: function () {
+            if (this.activeIndex < this.images.length - 1)
                 this.activeIndex++
             else this.activeIndex = 0;
         },
-        goToPrev: function() {
-            if(this.activeIndex > 0)
+        goToPrev: function () {
+            if (this.activeIndex > 0)
                 this.activeIndex--
             else this.activeIndex = this.images.length - 1;
         },
-        goToIndex: function(index) {
+        goToIndex: function (index) {
             this.activeIndex = index;
+        },
+        startCarousel: function () {
+            this.interval = setInterval(() => {
+                this.goToNext();
+            }, 3000);
+        },
+        stopCarousel: function () {
+            clearInterval(this.interval);
         }
-    }
+    },
 }).mount('#app');
