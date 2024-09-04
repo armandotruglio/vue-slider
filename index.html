@@ -20,6 +20,10 @@
         <div class="container">
             <div id="gallery">
                 <img :src="images[activeIndex].image" :alt='images[activeIndex].title'>
+                <div class="text">
+                    <h3> {{ images[activeIndex].title }} </h3>
+                    <h5> {{ images[activeIndex].text }} </h5>
+                </div>
             </div>
     
             <div class="side-nav">

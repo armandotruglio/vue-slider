@@ -21,7 +21,6 @@ img{
     height: 500px;
     margin: 0 auto;
     display: flex;
-
 }
 
 /* Gallery */
@@ -29,10 +28,19 @@ img{
 #gallery{
     flex-basis: 80%;
     height: 100%;
+    position: relative;
 }
 
 #gallery img{
     height: 100%;
+}
+
+#gallery .text{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
 }
 
 /* Side Nav */
