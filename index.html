@@ -28,7 +28,9 @@
     
             <div class="side-nav">
                 <i class="fa-solid fa-circle-arrow-up" id="prev" @click="goToPrev()"></i>
-                <div id="thumbnail"></div>
+                <div id="thumbnail">
+                    <img v-for="(image,i) of images" :src="image.image" :alt='image.title' @click="goToIndex(i)" :class = "{active : i === activeIndex}">
+                </div>
                 <i class="fa-solid fa-circle-arrow-down" id="next" @click="goToNext()"></i>
             </div>
         </div>

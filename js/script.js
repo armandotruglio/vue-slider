@@ -43,6 +43,9 @@ createApp ({
             if(this.activeIndex > 0)
                 this.activeIndex--
             else this.activeIndex = this.images.length - 1;
+        },
+        goToIndex: function(index) {
+            this.activeIndex = index;
         }
     }
 }).mount('#app');

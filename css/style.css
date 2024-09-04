@@ -21,6 +21,7 @@ img{
     height: 500px;
     margin: 0 auto;
     display: flex;
+    margin-top: 4rem;
 }
 
 /* Gallery */
@@ -61,7 +62,11 @@ img{
 }
 
 .side-nav .fa-circle-arrow-down{
-    top: 95%;
+    top: 100%;
+}
+
+.side-nav .fa-circle-arrow-up{
+    bottom: 100%;
 }
 
 /* Thumbnail */
@@ -71,6 +76,7 @@ img{
 
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 
