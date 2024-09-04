@@ -1,0 +1,77 @@
+/* CSS Reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+
+/* Generics */
+
+img{
+    width: 100%;
+    max-height: 100%;
+}
+
+/* Container */
+
+.container{
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+/* Gallery */
+
+#gallery{
+    flex-basis: 80%;
+    height: 100%;
+}
+
+#gallery img{
+    height: 100%;
+}
+
+/* Side Nav */
+
+.side-nav{
+    position: relative;
+    flex-basis: 30%;
+    height: 100%;
+}
+
+.side-nav i{
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: green;
+    position: absolute;
+    z-index: 1;
+    right: 50%;
+}
+
+.side-nav .fa-circle-arrow-down{
+    top: 95%;
+}
+
+/* Thumbnail */
+
+#thumbnail{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+#thumbnail img{
+    filter: grayscale(1);
+    height: 100px;
+}
+
+#thumbnail img.active{
+    filter: grayscale(0);
+    border: 4px solid red;
+}
